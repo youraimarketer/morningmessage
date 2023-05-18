@@ -120,7 +120,8 @@ setGeneratedBios((prev) => prev + chunkValue);
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. I am writing to express my keen interest in the AI Engineer position at JeezAI..."
+              "e.g. Internship Summary:
+Motional is offering an internship opportunity for the Perception and Prediction team. The team works on the tech stack..."
             }
           />
           <div className="flex mb-5 items-center space-x-3">
