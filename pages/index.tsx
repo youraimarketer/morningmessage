@@ -95,7 +95,7 @@ const Home: NextPage = () => {
           <p>Star on GitHub</p>
         </a>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next cover letter with chatGPT
+          Generate your next cover letter with ChatGPT-4!
         </h1>
         <p className="text-slate-500 mt-5">1471 students used so far.</p>
         <div className="max-w-xl w-full">
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
           />
           <div className="flex mb-5 items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+            <p className="text-left font-medium">Are you a new-grad, co-op or student? </p>
           </div>
           <div className="block">
             <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
