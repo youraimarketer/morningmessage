@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   const [fullName, setFullName] = useState("");
   const [university, setUniversity] = useState("");
   const [previousExperiences, setPreviousExperiences] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("new-grad");
+  const [vibe, setVibe] = useState<VibeType>("New-grad");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   const bioRef = useRef<null | HTMLDivElement>(null);
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
   let vibeSpecificPrompt = '';
 
-  if (vibe === "new-grad") {
+  if (vibe === "New-grad") {
     vibeSpecificPrompt = "Make sure you emphasis that you have graduated from university.";
   } else if (vibe === "Co-op") {
     vibeSpecificPrompt = "Indicate your willingness to learn and grow during your cooperative education.";
