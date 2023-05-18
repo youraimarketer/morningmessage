@@ -98,7 +98,7 @@ setGeneratedBios((prev) => prev + chunkValue);
 </a>
 
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next cover letter with ChatGPT-4!
+          Create Your Best Cover Letter with ChatGPT!
         </h1>
         <p className="text-slate-500 mt-5">1471 students used so far.</p>
         <div className="max-w-xl w-full">
