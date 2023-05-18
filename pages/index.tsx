@@ -208,7 +208,7 @@ setGeneratedBios((prev) => prev + chunkValue);
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
-                {generatedBios
+             {generatedBios
   .substring(generatedBios.indexOf("1") + 1)
   .split("1.")
   .map((generatedBio, index) => {
@@ -229,6 +229,7 @@ setGeneratedBios((prev) => prev + chunkValue);
       </div>
     );
   })}
+
 
         </div>
       </main>
