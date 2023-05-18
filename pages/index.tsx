@@ -223,10 +223,11 @@ setGeneratedBios((prev) => prev + chunkValue);
         }}
         key={generatedBio}
       >
-        <p dangerouslySetInnerHTML={{ __html: generatedBio }} />
+        <p style={{textAlign: "left"}} dangerouslySetInnerHTML={{ __html: generatedBio }} />
       </div>
     );
   })}
+
 
               </div>
             </>
