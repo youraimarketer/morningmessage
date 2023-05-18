@@ -100,7 +100,7 @@ setGeneratedBios((prev) => prev + chunkValue);
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
           Create Your Best Cover Letter with ChatGPT!
         </h1>
-        <p className="text-slate-500 mt-5">1471 students used so far.</p>
+        <p className="text-slate-500 mt-5">1453 students used so far.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             
@@ -118,7 +118,7 @@ setGeneratedBios((prev) => prev + chunkValue);
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. I am writing to express my keen interest in the AI Engineer position at JeezAI..."
+              "e.g. Deep Genomics is seeking exceptional graduate or senior undergraduate students for an 8 to 12-month internship with..."
             }
           />
           <div className="flex mb-5 items-center space-x-3">
