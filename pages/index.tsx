@@ -174,20 +174,20 @@ setGeneratedBios((prev) => prev + chunkValue);
           />
         </div>
           {!loading && (
-            <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
-              onClick={(e) => generateBio(e)}
-            >
-              Create Now &rarr;
-            </button>
-          )}
-          {loading && (
-            <button
-              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
-              disabled
-            >
-              <LoadingDots color="white" style="large" />
-            </button>
+           <button
+  className="animated-button rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 w-full"
+  onClick={(e) => generateBio(e)}
+>
+  Create Now &rarr;
+</button>
+
+<button
+  className="animated-button rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 w-full"
+  disabled
+>
+  <LoadingDots color="white" style="large" />
+</button>
+
           )}
         </div>
         <Toaster
