@@ -1,5 +1,3 @@
-
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -41,7 +39,7 @@ const Home: NextPage = () => {
   }
 
   const prompt = `Generate a cover letter for ${vibe}. The applicant's name is ${fullName}, and they graduated from ${university}. They have the following previous experiences: ${previousExperiences}. Use date, name surname etc. fields with placeholders. ${vibeSpecificPrompt}
-  Make sure each generated cover letter is around than 600 characters, has profound understanding to the sentences found in Description, and base them on this context: ${bio}${bio.slice(-1) === "." ? "" : "."}`;
+    Make sure each generated cover letter is around than 600 characters, has profound understanding to the sentences found in Description, and base them on this context: ${bio}${bio.slice(-1) === "." ? "" : "."}`;
 
   const generateBio = async (e: any) => {
     e.preventDefault();
@@ -100,12 +98,18 @@ setGeneratedBios((prev) => prev + chunkValue);
 </a>
 
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Create The Best Cover Letter with ChatGPT-4!
+          Generate your next cover letter with ChatGPT-4!
         </h1>
-        <p className="text-slate-500 mt-5">1453 students used so far.</p>
+        <p className="text-slate-500 mt-5">1471 students used so far.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
-            
+            <Image
+              src="/1-black.png"
+              width={30}
+              height={30}
+              alt="1 icon"
+              className="mb-5 sm:mb-0"
+            />
             <p className="text-left font-medium">
               Copy and paste the job description{" "}
               <span className="text-slate-500">
@@ -120,12 +124,11 @@ setGeneratedBios((prev) => prev + chunkValue);
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Internship Summary:
-Motional is offering an internship opportunity for the Perception and Prediction team. The team works on the tech stack..."
+              "e.g. I am writing to express my keen interest in the AI Engineer position at JeezAI..."
             }
           />
           <div className="flex mb-5 items-center space-x-3">
-           
+            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
             <p className="text-left font-medium">Are you a new-grad, co-op or student? </p>
           </div>
           <div className="block">
