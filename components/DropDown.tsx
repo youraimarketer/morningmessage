@@ -17,7 +17,7 @@ interface DropDownProps {
   setVibe: (vibe: VibeType) => void;
 }
 
-let vibes: VibeType[] = ["Professional", "Casual", "Funny"];
+let vibes: VibeType[] = ["New-grad", "Co-op", "Student"];
 
 export default function DropDown({ vibe, setVibe }: DropDownProps) {
   return (
