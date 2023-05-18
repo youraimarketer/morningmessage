@@ -18,13 +18,13 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   const payload: OpenAIStreamPayload = {
-    model: "gpt-3.5-turbo",
+    model: "gpt-4",
     messages: [{ role: "user", content: prompt }],
     temperature: 0.4,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 500,
+    max_tokens: 300,
     stream: true,
     n: 1,
   };
