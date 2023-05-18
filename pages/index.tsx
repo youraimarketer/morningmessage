@@ -103,13 +103,7 @@ setGeneratedBios((prev) => prev + chunkValue);
         <p className="text-slate-500 mt-5">1471 students used so far.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
-            <Image
-              src="/1-black.png"
-              width={30}
-              height={30}
-              alt="1 icon"
-              className="mb-5 sm:mb-0"
-            />
+            
             <p className="text-left font-medium">
               Copy and paste the job description{" "}
               <span className="text-slate-500">
@@ -128,7 +122,6 @@ setGeneratedBios((prev) => prev + chunkValue);
             }
           />
           <div className="flex mb-5 items-center space-x-3">
-            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
             <p className="text-left font-medium">Are you a new-grad, co-op or student? </p>
           </div>
           <div className="block">
