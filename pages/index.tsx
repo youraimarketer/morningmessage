@@ -27,9 +27,9 @@ const Home: NextPage = () => {
 
   if (vibe === "new-grad") {
     vibeSpecificPrompt = "Make sure you emphasis that you have graduated from university.";
-  } else if (vibe === "co-op") {
+  } else if (vibe === "Co-op") {
     vibeSpecificPrompt = "Indicate your willingness to learn and grow during your cooperative education.";
-  } else if (vibe === "student") {
+  } else if (vibe === "Student") {
     vibeSpecificPrompt = "Stress on your eagerness to gain professional experience while pursuing your studies.";
   } else {
     vibeSpecificPrompt = ""; // Default prompt for other vibes
