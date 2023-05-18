@@ -213,20 +213,21 @@ setGeneratedBios((prev) => prev + chunkValue);
   .split("1.")
   .map((generatedBio) => {
     return (
-      <div
-        className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
-        onClick={() => {
-          navigator.clipboard.writeText(generatedBio);
-          toast("Cover letter copied", {
-            icon: "✂️",
-          });
-        }}
-        key={generatedBio}
-      >
-        <p style={{textAlign: "left"}} dangerouslySetInnerHTML={{ __html: generatedBio }} />
-      </div>
-    );
-  })}
+     <div
+  className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
+  onClick={() => {
+    const html = document.createElement("div");
+    html.innerHTML = generatedBio;
+    navigator.clipboard.writeText(html.innerText || html.textContent);
+    toast("Cover letter copied", {
+      icon: "✂️",
+    });
+  }}
+  key={generatedBio}
+>
+  <p style={{textAlign: "left"}} dangerouslySetInnerHTML={{ __html: generatedBio }} />
+</div>
+
 
 
               </div>
