@@ -214,13 +214,7 @@ setGeneratedBios((prev) => prev + chunkValue);
   .map((generatedBio) => {
     return (
       <div
-        className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
-        onClick={() => {
-          navigator.clipboard.writeText(generatedBio);
-          toast("Cover letter copied", {
-            icon: "✂️",
-          });
-        }}
+        className="bg-white rounded-xl shadow-md p-4 border"
         key={generatedBio}
       >
         <p style={{textAlign: "left"}} dangerouslySetInnerHTML={{ __html: generatedBio }} />
