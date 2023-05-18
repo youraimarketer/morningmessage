@@ -1,3 +1,5 @@
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -173,24 +175,21 @@ setGeneratedBios((prev) => prev + chunkValue);
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
           />
         </div>
-        {!loading ? (
-  <button
-  className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
-  onClick={(e) => generateBio(e)}
->
-  Create Now &rarr;
-</button>
-
-<button
-  className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
-  disabled
->
-  <LoadingDots color="white" style="large" />
-</button>
-
-)}
-
-
+          {!loading && (
+            <button
+              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              onClick={(e) => generateBio(e)}
+            >
+              Create Now &rarr;
+            </button>
+          )}
+          {loading && (
+            <button
+              className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+              disabled
+            >
+              <LoadingDots color="white" style="large" />
+            </button>
           )}
         </div>
         <Toaster
