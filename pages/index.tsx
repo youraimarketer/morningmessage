@@ -102,16 +102,10 @@ setGeneratedBios((prev) => prev + chunkValue);
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
           Create The Best Cover Letter with ChatGPT-4!
         </h1>
-        <p className="text-slate-500 mt-5">1454 students used so far.</p>
+        <p className="text-slate-500 mt-5">1453 students used so far.</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
-            <Image
-              src="/1-black.png"
-              width={30}
-              height={30}
-              alt="1 icon"
-              className="mb-5 sm:mb-0"
-            />
+            
             <p className="text-left font-medium">
               Copy and paste the job description{" "}
               <span className="text-slate-500">
