@@ -1,26 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animated-button {
-  background: linear-gradient(270deg, #00ff15, #1AABDA);
-  background-size: 200% 200%;
-  animation: gradient 2s linear infinite;
-  transition: all 0.3s ease;
-}
-
-.animated-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
