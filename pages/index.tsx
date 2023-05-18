@@ -23,14 +23,20 @@ const Home: NextPage = () => {
     }
   };
 
-  const prompt = `Generate 2 ${vibe} cover letters and clearly labeled "1." and "2.". ${
-    vibe === "new-grad"
-      ? "Make sure you emphasis that you have graduated from university."
-      : null
+  let vibeSpecificPrompt = '';
+
+  if (vibe === "new-grad") {
+    vibeSpecificPrompt = "Make sure you emphasis that you have graduated from university.";
+  } else if (vibe === "co-op") {
+    vibeSpecificPrompt = "Indicate your willingness to learn and grow during your cooperative education.";
+  } else if (vibe === "student") {
+    vibeSpecificPrompt = "Stress on your eagerness to gain professional experience while pursuing your studies.";
+  } else {
+    vibeSpecificPrompt = ""; // Default prompt for other vibes
   }
-      Make sure each generated cover letter is around than 600 characters, has profound understanding to the sentences found in Description, and base them on this context: ${bio}${
-    bio.slice(-1) === "." ? "" : "."
-  }`;
+
+  const prompt = `Generate a cover letter for ${vibe} and use date, name surname etc. fields with placeholders. ${vibeSpecificPrompt}
+    Make sure each generated cover letter is around than 600 characters, has profound understanding to the sentences found in Description, and base them on this context: ${bio}${bio.slice(-1) === "." ? "" : "."}`;
 
   const generateBio = async (e: any) => {
     e.preventDefault();
