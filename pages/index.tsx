@@ -196,40 +196,32 @@ setGeneratedBios((prev) => prev + chunkValue);
           toastOptions={{ duration: 2000 }}
         />
         <hr className="h-px bg-gray-700 border-1 dark:bg-gray-700" />
-       <div className="space-y-10 my-10">
-  {generatedBios && (
-    <>
-      <div>
-        <h2
-          className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
-          ref={bioRef}
-        >
-          Your generated bios
-        </h2>
-      </div>
-      <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
-        {/* Your map method */}
-      </div>
-    </>
-  )}
-</div>  // This might be the missing closing tag
-
-             {generatedBios
+        <div className="space-y-10 my-10">
+          {generatedBios && (
+            <>
+              <div>
+                <h2
+                  className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
+                  ref={bioRef}
+                >
+                  Your generated bios
+                </h2>
+              </div>
+              <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+                {generatedBios
   .substring(generatedBios.indexOf("1") + 1)
   .split("1.")
-  .map((generatedBio, index) => {
+  .map((generatedBio) => {
     return (
       <div
         className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
         onClick={() => {
-          const html = document.createElement("div");
-          html.innerHTML = generatedBio;
-          navigator.clipboard.writeText(html.innerText || html.textContent);
+          navigator.clipboard.writeText(generatedBio);
           toast("Cover letter copied", {
             icon: "✂️",
           });
         }}
-        key={index}
+        key={generatedBio}
       >
         <p style={{textAlign: "left"}} dangerouslySetInnerHTML={{ __html: generatedBio }} />
       </div>
@@ -237,6 +229,9 @@ setGeneratedBios((prev) => prev + chunkValue);
   })}
 
 
+              </div>
+            </>
+          )}
         </div>
       </main>
       <Footer />
