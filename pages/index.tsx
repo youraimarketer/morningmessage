@@ -227,7 +227,6 @@ setGeneratedBios((prev) => prev + chunkValue);
 >
   <p style={{textAlign: "left"}} dangerouslySetInnerHTML={{ __html: generatedBio }} />
 </div>
-</div>
             </>
           )}
         </div>
