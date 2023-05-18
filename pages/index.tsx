@@ -137,7 +137,7 @@ const Home: NextPage = () => {
   {/* New form fields */}
         <div className="flex mt-10 items-center space-x-3">
           <label htmlFor="fullName" className="text-left font-medium">
-            Full Name:
+            Name:
           </label>
           <input
             id="fullName"
