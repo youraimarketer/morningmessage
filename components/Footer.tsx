@@ -6,21 +6,12 @@ export default function Footer() {
       <div>
         Powered by{" "}
         <a
-          href="https://openai.com/blog/chatgpt"
+          href="https://twitter.com/youraimarketer"
           target="_blank"
           rel="noreferrer"
           className="font-bold hover:underline transition underline-offset-2"
         >
           ChatGPT{" "}
-        </a>
-        and{" "}
-        <a
-          href="https://vercel.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="font-bold hover:underline transition underline-offset-2"
-        >
-          Vercel Edge Functions.
         </a>
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
@@ -37,7 +28,7 @@ export default function Footer() {
           </svg>
         </Link>
         <Link
-          href="https://github.com/Nutlope/twitterbio"
+          href="https://github.com/youraimarketer/morningmessage"
           className="group"
           aria-label="TaxPal on GitHub"
         >
