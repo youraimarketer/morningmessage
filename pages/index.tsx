@@ -12,6 +12,9 @@ import LoadingDots from "../components/LoadingDots";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [bio, setBio] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [university, setUniversity] = useState("");
+  const [previousExperiences, setPreviousExperiences] = useState("");
   const [vibe, setVibe] = useState<VibeType>("new-grad");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
@@ -35,7 +38,7 @@ const Home: NextPage = () => {
     vibeSpecificPrompt = ""; // Default prompt for other vibes
   }
 
-  const prompt = `Generate a cover letter for ${vibe} and use date, name surname etc. fields with placeholders. ${vibeSpecificPrompt}
+  const prompt = `Generate a cover letter for ${vibe}. The applicant's name is ${fullName}, and they graduated from ${university}. They have the following previous experiences: ${previousExperiences}. Use date, name surname etc. fields with placeholders. ${vibeSpecificPrompt}
     Make sure each generated cover letter is around than 600 characters, has profound understanding to the sentences found in Description, and base them on this context: ${bio}${bio.slice(-1) === "." ? "" : "."}`;
 
   const generateBio = async (e: any) => {
@@ -131,7 +134,45 @@ const Home: NextPage = () => {
           <div className="block">
             <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
           </div>
+  {/* New form fields */}
+        <div className="flex mt-10 items-center space-x-3">
+          <label htmlFor="fullName" className="text-left font-medium">
+            Full Name:
+          </label>
+          <input
+            id="fullName"
+            type="text"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+          />
+        </div>
 
+        <div className="flex mt-10 items-center space-x-3">
+          <label htmlFor="university" className="text-left font-medium">
+            University/Program:
+          </label>
+          <input
+            id="university"
+            type="text"
+            value={university}
+            onChange={(e) => setUniversity(e.target.value)}
+            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+          />
+        </div>
+
+        <div className="flex mt-10 items-center space-x-3">
+          <label htmlFor="previousExperiences" className="text-left font-medium">
+            Previous Experiences:
+          </label>
+          <input
+            id="previousExperiences"
+            type="text"
+            value={previousExperiences}
+            onChange={(e) => setPreviousExperiences(e.target.value)}
+            className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+          />
+        </div>
           {!loading && (
             <button
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
