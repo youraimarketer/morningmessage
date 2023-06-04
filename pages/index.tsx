@@ -197,7 +197,7 @@ setGeneratedBios((prev) => prev + chunkValue);
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  Your generated bios
+                 Best of luck with your cover letter!
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
