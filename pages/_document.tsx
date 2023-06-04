@@ -20,7 +20,7 @@ class MyDocument extends Document {
           <meta name="twitter:title" content="Cover Letter Generator" />
           <meta
             name="twitter:description"
-            content="Generate your next Twitter bio in seconds."
+            content="Write your cover letter"
           />
           <meta
             property="og:image"
