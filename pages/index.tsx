@@ -38,7 +38,7 @@ const Home: NextPage = () => {
     vibeSpecificPrompt = ""; // Default prompt for other vibes
   }
 
-  const prompt = `Generate a cover letter for ${vibe}. The applicant's name is ${fullName}, and they graduated from ${university}. They have the following previous experiences: ${previousExperiences}. Use date, name surname etc. fields with placeholders. ${vibeSpecificPrompt}
+  const prompt = `Generate a very professional and high-quality cover letter for this candidate's AI intenrship. The applicant's name is ${fullName}, and they graduated from ${university}. They have the following previous experiences: ${previousExperiences}. Use date, name surname etc. fields with placeholders. ${vibeSpecificPrompt}
     Make sure each generated cover letter is around than 600 characters, has profound understanding to the sentences found in Description, and base them on this context: ${bio}${bio.slice(-1) === "." ? "" : "."}`;
 
   const generateBio = async (e: any) => {
